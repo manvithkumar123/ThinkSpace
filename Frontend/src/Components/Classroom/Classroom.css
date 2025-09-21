@@ -1,0 +1,199 @@
+
+.classroom_page{
+    min-height: 100vh;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding-bottom: 30px;
+    position: relative;
+}
+.classroom_section{
+    min-height: 500px;
+    position: relative;
+    height: max-content;
+    width: 80%;
+    margin-top: 50px;
+    background-color: var(--navbar-element);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 60px 10px 20px 10px;
+    box-shadow: 0 0 0.5rem var(--text-color);
+}
+.classrooms_box{
+    height: 200px;
+    width: 350px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    filter: var(--drop-shadow3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--normal-text);
+    flex-direction: column;
+}
+.classrooms_box_loader{
+    animation: skeleton 1s linear infinite alternate;
+    height: 200px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.classrooms_box h2{
+    margin-left: 15px;
+    font-family: var(--font-roboto);
+    font-weight: 1500;
+    margin-right: auto;
+}
+.classrooms_box button{
+    height: 30px;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    background-color: #B46FEC;
+    color: white;
+    border: 0px ;
+    font-family: var(--font-montserrat);
+    font-size: 15px;
+    font-weight: bolder;
+}
+.classrooms_box p {
+    width: 80%;
+    margin-right: auto;
+    margin-left: 15px;
+}
+.classrooms_box button{
+    margin-left: auto;
+    margin-right: 10px;
+}
+.button_container_add_delete{
+    display: flex;
+    margin-left: auto;
+    padding-top: 10px;
+}
+.create_room_admin_page{
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.new_room_box{
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    gap: 15px;
+}
+.new_room_box button{
+    height: 30px;
+    width: 150px;
+    border: 0.4px solid black;
+    border-radius: 10px;
+    background-color: #1A72E9;
+    color: white;
+}
+.new_room_box svg{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.new_room_box input{
+    height: 30px;
+    border: 0.4px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+}
+.rules_section{
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: column;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--light-text);
+}
+.rules_section h2{
+    font-family: var(--font-roboto);
+    opacity: 50%;
+}
+.rules_section h4{
+    opacity: 50%;
+    margin-top: 10px;
+}
+.create_new_room_admin{
+    height: 40px;
+    width: 120px;
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    left: 0;
+}
+.create_new_room_admin button{
+    height: 30px;
+    width: 125px;
+    padding: 2px;
+    border-radius: 10px;
+    border: 0.4px solid black;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    fill: var(--text-color);
+    align-items: center;
+    z-index: 10000;
+}
+@media (max-width: 820px) {
+    .classrooms_box{
+        max-width: 200px;
+        flex: 1 1 45%;
+    }
+    .classroom_section{
+        gap: 10px;
+    }
+    .classrooms_box button{
+        margin-top: 10px;
+    }
+    .classrooms_box h2{
+        font-size: 15px;
+    }
+    .classrooms_box p{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+}
+@keyframes skeleton {
+    0%{
+        background-color: hsl(200, 20%, 80%);
+    }
+    100%{
+        background-color: hsl(200, 20%, 95%);
+    }
+}

@@ -1,0 +1,213 @@
+.Navbar{
+    background-color: var(--navbar-color);
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-between;
+}
+.dark-light-toggler{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+.brand_image_text{
+    height: 100%;
+    width: 200px;
+    align-items: center;
+    font-family: var(--font-josefin);
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+}
+.dark-light-toggler{
+    width: 75%;
+}
+.brand_image_text h2{
+    margin-top: 10px;
+    color: var(--text-color);
+}
+.brand_image_text img{
+    height: 100%;
+    width: 30%;
+    object-fit: contain;
+}
+.navbar_options{
+    display: flex;
+    gap: 25px;
+    cursor: pointer;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: 120px;
+}
+.navbar_options h3{
+    font-family: var( --font-montserrat);
+    font-weight:900;
+    font-size: medium;
+    color: var(--text-color);
+}
+
+.toggler_button {
+  height: 35px;
+  width: 65px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+  border-radius: 25px;
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggler_circle {
+    height: 28px;
+    width: 28px;
+    background-color: #0048FF;
+    opacity: 70%;
+    position: absolute;
+    top: 4px;
+    left: 33px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.toggler_button.active {
+    background-color: #D9D9D9;
+}
+
+.toggler_button.active .toggler_circle {
+  left: 4px;
+}
+.profile_icon_bg{
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+    background-color: var(--navbar-element);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    align-items: center;
+}
+.profile_section {
+    z-index: 888;
+    height: 60px;
+    position: relative;
+    display: flex;
+    margin-right: auto;
+    margin-left: 30px;
+}
+.menubar{
+  display: none;
+}
+.user_information{
+    position: absolute;
+    top: 43px;
+    left: 40px;
+    color: white;
+    background-color: black;
+    height: 120px;
+    width: 180px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: medium;
+    border-top-left-radius: 0px;
+    -webkit-animation: scale-in-tl 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-tl 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.user_information button{
+    height: 30px;
+    width: 100px;
+    border: 0.4px solid var(--bg-color);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.user_information h3{
+    font-size: 17px;
+    margin-top: 5px;
+}
+@-webkit-keyframes scale-in-tl {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+.profile_section_phone{
+  display: none;
+}
+  
+  @keyframes scale-in-tl {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+@media screen and (max-width:880px) {
+  .navbar_options{
+    display: none;
+  }
+  .profile_section{
+    margin-right: 0px;
+  }
+  .menubar{
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    fill: var(--text-color);
+  }
+  .menubar svg{
+    fill: var(--text-color);
+  }
+  .menu_icon_bg{
+    height: 35px;
+    width: 35px;
+    margin: 0 auto;
+    background-color: var(--navbar-element);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile_section{
+    display: none;
+  }
+  .profile_section_phone{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+  }
+  .navbar_options{
+    display: none;
+  }
+}

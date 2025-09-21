@@ -1,0 +1,9 @@
+# Ignore environment files
+*.env
+
+# Node/React folders
+node_modules/
+.DS_Store
+build/
+dist/
+config/*.json

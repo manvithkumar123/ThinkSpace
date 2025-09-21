@@ -1,0 +1,292 @@
+.preview_page{
+    min-height: 70vh;
+    height: max-content;
+    width: 100vw;
+    padding-top: 30px;
+    background-color: var(--bg-color);
+    padding-bottom: 30px;
+}
+.preview_page_items_container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+.preview_pdf{
+    height: 650px;
+    width: 50%;
+    margin-left: 30px;
+    background-color: var(--navbar-element);
+    border-radius: 15px;
+}
+.preview_pdf_loader{
+    height: 700px;
+    width: 650px;
+    margin-left: 30px;
+    background-color: var(--navbar-element);
+    border-radius: 15px;
+    animation: skeleton 1s linear infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.preview_pdf iframe{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+.preview_chatbot{
+    height: 650px;
+    width: 500px;
+    background-color: var(--navbar-element);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-right: 20px;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.preview_chatbot_bottom_component{
+    position: sticky;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    margin-top: auto;
+    background-color: var(--navbar-element);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.preview_chatbot_bottom_component input{
+    height: 40px;
+    width: 350px;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: var(--sendbutton-bg);
+    padding-left: 10px !important; 
+    color: var(--normal-text);
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+}
+.preview_chatbot_bottom_component button{
+    height: 45px;
+    width: 45px;
+    margin-left: 10px;
+    border-radius: 50px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sendbutton-bg);
+    fill: var(--normal-text);
+}
+.ai_logo_answer{
+    position: relative;
+
+}
+.ai_logo_preview{
+    height:30px;
+    width:30px;
+    position: absolute;
+    border-radius: 50px;
+    left: 7px;
+}
+.preview_ai_question{
+    background-color: var(--userinput-bg);
+    height: max-content;
+    width: 400px;
+    font-family: "Google Sans Flex", "Google Sans", "Helvetica Neue", sans-serif;
+font-size: 12px;
+font-weight: 400;
+line-height: 18px;
+color: rgb(27, 28, 29);
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: var(--normal-text);
+    border-top-right-radius: 0px;
+}
+.preview_ai_answer{
+    height: max-content;
+    padding-left: 2px;
+    width: 400px;
+    margin-top: 18px;
+    margin-left: 35px;
+    margin-right: auto;
+    font-family: "Google Sans Flex", "Google Sans", "Helvetica Neue", sans-serif;
+font-size: 12px;
+font-weight: 400;
+line-height: 18px;
+color: rgb(27, 28, 29);
+    color: var(--normal-text);
+}
+.ai_logo_image{
+    height: 28px;
+    width: 28px;
+    object-fit: cover;
+}
+.ai_logo_image_white{
+    filter: invert(-1);
+    height: 28px;
+    width: 28px;
+    object-fit: cover;
+}
+.chat_section{
+    margin-bottom: 20px;
+}
+.Ai_background_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Ai_background_logo img{
+    height: 200px;
+    width: 200px;
+}
+.Ai_background_logo h3{
+    font-size: 30px;
+    color: var(--normal-text);
+}
+.button-send svg {
+    display: block;
+}
+
+.fly-rotate {
+    animation: rotate-fly 1s ease-in-out forwards;
+}
+
+@keyframes rotate-fly {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-100%) rotate(180deg); /* fly up and rotate */
+        opacity: 0;
+    }
+    41% {
+        transform: translateY(100%) rotate(180deg); /* come from bottom */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg); /* back to original */
+        opacity: 1;
+    }
+}
+@media screen and (max-width:480px) and (min-width:470px) {
+    .preview_ai_question{
+        width: 350px;
+    }
+    .preview_pdf{
+        width: 90%;
+        margin-left: 0px;
+    }
+    .preview_chatbot{
+        height: 600px;
+    }
+    .preview_chatbot_bottom_component{
+        padding: 0;
+        margin-right: 10px;
+    }
+    .chat_section{
+        height: 570px;
+        padding-bottom: 10px;
+        overflow-y: scroll;
+    }
+    .preview_page_items_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .preview_chatbot{
+        margin-top: 20px;
+        width: 90%;
+        margin-right: 0px;
+        padding: 10px;
+    }
+    .preview_ai_answer{
+        width: 90%;
+    }
+}
+@media screen and (max-width:396px) {
+    .preview_ai_question{
+        width: 300px;
+    }
+    .preview_pdf{
+        width: 90%;
+        margin-left: 0px;
+    }
+    .preview_chatbot{
+        height: 600px;
+    }
+    .preview_ai_answer{
+        width: 290px;
+    }
+    .preview_chatbot_bottom_component{
+        padding: 0;
+    }
+
+    .preview_page_items_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .preview_chatbot{
+        margin-top: 20px;
+        width: 90%;
+        margin-right: 0px;
+        padding: 10px;
+    }
+    .chat_section{
+        height: 570px;
+        padding-bottom: 10px;
+        overflow-y: scroll;
+    }
+}
+@media screen and (max-width:1122px) and (min-width:394px) {
+    .preview_ai_question{
+        width: 350px;
+    }
+    .preview_pdf{
+        width: 90%;
+        margin-left: 0px;
+    }
+    .preview_chatbot{
+        height: 600px;
+    }
+    .preview_chatbot_bottom_component{
+        padding: 0;
+        margin-right: 10px;
+    }
+    .chat_section{
+        height: 570px;
+        padding-bottom: 10px;
+        overflow-y: scroll;
+    }
+    .preview_page_items_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .preview_chatbot{
+        margin-top: 20px;
+        width: 90%;
+        margin-right: 0px;
+        padding: 10px;
+    }
+    .preview_ai_answer{
+        width: 70%;
+    }
+}

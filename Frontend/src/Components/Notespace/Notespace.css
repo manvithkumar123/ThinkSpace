@@ -1,0 +1,326 @@
+.note_page{
+    height: max-content;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    position: relative;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.filter_space{
+    height: max-content;
+}
+.note_page button{
+    margin-left: auto;
+    height: 100px;
+    width: 100px;
+}
+.filter_coloum{
+    height: max-content;
+    margin-top: 70px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    color: var(--normal-text);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding-bottom: 20px;
+    gap: 10px;
+    margin-left: 50px;
+    background-color: var(--navbar-element);
+}
+.filter_coloum h3{
+    text-decoration: underline 2px rgb(144,213,255);
+    text-underline-offset: 2px;
+}
+.filter_coloum h2{
+    text-align: center;
+}
+.branch_checkpoints{
+    display: flex;
+    flex-direction: column;
+}
+.filter_semester_flex{
+    display: flex;
+    gap: 10px;
+}
+.notes_container_coloum{
+    width: 100%;
+    min-height: 100vh;
+    height: max-content;
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+#upload_button{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: yellow;
+    margin: 0 auto;
+    margin-top: 20px !important;
+}
+.upload_page{
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex_container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.notes_container_coloum_loader{
+    width: 80%;
+    min-height: 100vh;
+    height: max-content;
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: center;
+    animation: skeleton 1s linear infinite alternate;
+}
+.notes_uploaded_loader{
+    animation: skeleton 1s linear infinite alternate;
+    height: 240px;
+    width: 330px;
+    background-color: var(--navbar-element);
+    color: var(--normal-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+.notes_uploaded_loader h3{
+    color:black;
+}
+.notes_container{
+    width: max-content;
+    margin-top: 50px;
+    min-height: 250px;
+    height: max-content;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+}
+.notes_container h2{
+    color: var(--normal-text);
+    text-align: center; 
+    margin: 0 auto ;
+}
+.notes_img_container{
+    height: 130px;
+    width: 130px;
+}
+.notes_uploaded{
+    height: 240px;
+    width: 330px;
+    background-color: var(--navbar-element);
+    color: var(--normal-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+.notes_uploaded h4{
+    margin-top: 5px;
+}
+.text_notes_uploded{
+    margin-top: auto;
+}
+.text_notes_uploded p{
+    opacity: 60%;
+}
+.button_container_uploaded_notes{
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    height: max-content;
+}
+.button_container_uploaded_notes button{
+    height: 30px;
+    display: flex;
+    background-color: var(--light-text);
+    fill: var(--navbar-element);
+    color: var(--navbar-element);
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+}
+.image_text_container{
+    display: flex;
+}
+.notes_img_container img{
+    height: 90%;
+    width: 90%;
+    object-fit: contain;
+}
+@keyframes skeleton {
+    0%{
+        background-color: hsl(200, 20%, 80%);
+    }
+    100%{
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+.notes_img_loader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--normal-text);
+    flex-direction: column;
+}
+.loading_uploading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    align-items: center;
+}
+.loading_uploading h3{
+}
+.upload_container{
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    z-index: 999;
+    align-items: center;
+}
+.branch_checkpoints_semester{
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.upload_container label{
+    width: 200px;
+    display: flex;
+}
+.upload_container label select{
+    margin-left: 10px;
+    width: 100px;
+    margin-left: auto;
+}
+#drop-area{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    background-color: red;
+    text-align: center;
+    border-radius: 5px;
+}
+#img-view{
+    width: 100;
+    background-color: green;
+}
+#input_file{
+    height: 100px;
+    width: 90%;
+    margin-bottom: 10px;
+    border: dotted black;
+}
+#upload_submit{
+    height: 30px !important;
+    border-radius: 5px;
+    border: 0.8px solid black;
+    width: 150px !important;
+    margin-top: 20px;
+}
+#close_button{
+    margin-left: auto;
+    margin-top: -20px;
+    margin-right: 10px;
+}
+@media screen and (max-width: 830px) {
+    .menubar {
+        margin: 0 auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        fill: var(--text-color);
+    }
+    .filter_coloum{
+        margin: 0px;
+        margin-top: 20px;
+    }
+    #subject_container{
+        display: none;
+    }
+}
+@media screen and (min-width:1080px) and (max-width:1430px) {
+    .notes_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .filter_coloum{
+        margin-top: 70px;
+    }
+}
+@media screen and (max-width:1079px) and (min-width:696px) {
+    .notes_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .filter_coloum{
+        margin-top: 70px;
+    }
+}
+@media screen and (max-width:695px) and (min-width:0px) {
+    .notes_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .note_page{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .filter_coloum{
+        margin-top: 70px;
+    }
+}
+@media screen and (width:1180px) and (height:820px) {
+    .notes_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .filter_coloum{
+        margin-top: 70px;
+    }
+    .note_page{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-height:482px) and (min-width:1030px) {
+    .notes_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .note_page{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .filter_coloum{
+        margin-right: 10px;
+        margin-left: 20px;
+        margin-top: 70px;
+    }
+}

@@ -1,0 +1,234 @@
+.dashboard_page{
+    min-height: 80vh;
+    height: max-content;
+    width: 100vw;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+.openquery_page{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.openquery_container{
+    height: max-content;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow-y: scroll;
+}
+.openquery_container h4{
+    font-size: 17px;
+    margin: 10px;
+}
+.openquery_container button{
+    height: 30px !important;
+    margin-top: 10px !important;
+    width: 150px;
+    margin-top: auto !important;
+    margin: 0 auto;
+    margin-bottom: 20px !important;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    border: 0.7px solid black;
+    color: white;
+}
+.openquery_container h3 {
+    margin: 10px;
+    height: 200px;
+    overflow-y: scroll;
+}
+.dashboard_section{
+    background-color: var(--userprofile-bg);
+    width: 40%;
+    padding: 0 30px 0 30px;
+    height: max-content;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 0.3rem var(--normal-text);
+    display: flex;
+    flex-direction: column;
+    color: var(--normal-text);
+}
+.first_coloum_userinfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.user_section_dashboard{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.user_section_dashboard img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.user_information_dashboard button{
+    height: 30px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+.information_section{
+    height: 500px;
+    margin-right: 20px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    background-color: var(--userprofile-bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0.3rem var(--normal-text);
+    color: var(--normal-text);
+}
+.information_section label{
+    margin: 10px;
+}
+.information_section input{
+    height: 30px;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 17px;
+    border: 0.4px solid black;
+}
+#query_id{
+    height: 150px;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 0.4px solid black;
+    resize: none;
+    font-size: 15px;
+}
+.information_section button{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: 0.4px solid black;
+}
+.information_section button:active {
+    transform: scale(0.95);  /* slightly shrink */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* deeper shadow for pressed effect */
+}
+.feedback_section{
+    height: 500px;
+    margin-right: 20px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: var(--userprofile-bg);
+    overflow-y: auto; 
+    box-shadow: 0 0 0.3rem var(--normal-text);
+    color: var(--normal-text);
+}
+.querylist{
+    width: 85%;
+    padding: 0 10px 0 10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    background-color: var(--text-color);
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    display: flex;
+    color: var(--card-color);
+    height: 50px;
+}
+#query_username{
+    font-size: 30px;
+    font-weight: 600;
+}
+#query_mail{
+    font-size: 15px;
+    opacity: 70%;
+}
+.time_stamp_container{
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: auto;
+    opacity: 70%;
+}
+.flex_coloum_display{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 40%;
+}
+.Query_preview{
+    height: 300px;
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: var(--userprofile-bg);
+    box-shadow: 0 0 0.3rem var(--normal-text);
+}
+.querylist button{
+    height: 30px;
+    width: 30px;
+    margin-top: auto;
+    border-radius: 5px;
+}
+.options_list button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 0.4px solid black;
+    width: 100px;
+}
+@media screen and (max-width:776px) {
+    .dashboard_page{
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .dashboard_section{
+        margin: 0px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+    }
+    .feedback_section{
+        margin-right: 0px;
+        width: 90%;
+    }
+    .user_section_dashboard{
+        width: 150px;
+        height: 120px;
+    }
+    .openquery_container{
+        width: 90%;
+    }
+}
