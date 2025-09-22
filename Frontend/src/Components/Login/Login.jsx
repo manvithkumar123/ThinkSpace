@@ -27,7 +27,6 @@ const Login = () => {
 
   const handleforgotpassword = async (e) => {
     e.preventDefault();
-    console.log("Forgot password form submitted with:", { forgotemail, forgotkey, newpassword });
     try {
       const res = await axios.post("/api/user/forgotpassword", { email: forgotemail, key: forgotkey, password: newpassword }, { withCredentials: true })
       toast.success(res.data.response || "Successfully changed password please login");
@@ -43,7 +42,6 @@ const Login = () => {
 
   const handlesignup = async (e) => {
     e.preventDefault();
-    console.log("Signup form submitted with:", { signupEmail, signupPassword, signupKey, name });
     try {
       const res = await axios.post("/api/user/register", { email: signupEmail, password: signupPassword, key: signupKey, name: name }, { withCredentials: true })
       toast.success(res.data.response || "Signup successful!");
@@ -59,7 +57,6 @@ const Login = () => {
 
   const handlelogin = async (e) => {
     e.preventDefault();
-    console.log("Login form submitted with:", { email, password });
     try {
       const res = await axios.post("/api/user/login", { email, password }, { withCredentials: true });
       toast.success(res.data.response || "login successful!");
