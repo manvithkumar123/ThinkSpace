@@ -37,7 +37,10 @@ app.use(expressSession({
     saveUninitialized: false,
     secret: process.env.SESSION_SECRET,
     cookie: {
-        sameSite: "None"   
+        httpOnly: true,
+        secure: true,       // required for cross-origin HTTPS
+        sameSite: "None",
+        maxAge: 24 * 60 * 60 * 1000  // 1 day
     }
 }));
 app.use(cors({

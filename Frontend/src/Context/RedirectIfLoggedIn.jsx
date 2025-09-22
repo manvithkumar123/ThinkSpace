@@ -1,14 +1,19 @@
+import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
+import axios from "axios";
 
 const RedirectIfLoggedIn = ({ children }) => {
-  const token = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("usertoken="))
-    ?.split("=")[1];
+  const [isLoggedIn, setIsLoggedIn] = useState(null); // null = loading
 
-  if (token) {
-    return <Navigate to="/dashboard" />;
-  }
+  useEffect(() => {
+    axios
+      .get("https://thinkspace-qowf.onrender.com/api/user/loggeduser", { withCredentials: true })
+      .then(() => setIsLoggedIn(true))
+      .catch(() => setIsLoggedIn(false));
+  }, []);
+
+  if (isLoggedIn === null) return <div>Loading...</div>; // optional loading state
+  if (isLoggedIn) return <Navigate to="/dashboard" />;
 
   return children;
 };
