@@ -37,8 +37,6 @@ app.use(expressSession({
     saveUninitialized: false,
     secret: process.env.SESSION_SECRET,
     cookie: {
-        httpOnly: false,
-        secure: true,      
         sameSite: "None"   
     }
 }));

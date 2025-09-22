@@ -9,8 +9,6 @@ const isLoggedin = require('../Middlewares/isLoggedin');
 // Helper function to set cookie
 const setUserTokenCookie = (res, token) => {
     res.cookie("usertoken", token, {
-        httpOnly: false,
-        secure: true,      // must be true if backend is HTTPS
         sameSite: "None",  // required for cross-site cookies
         maxAge: 24 * 60 * 60 * 1000 // 1 day
     });
@@ -138,8 +136,6 @@ router.post("/logout", isLoggedin, async (req, res) => {
 
     try {
         res.clearCookie("usertoken", {
-            httpOnly: false,
-            secure: true,
             sameSite: "None"
         });
         return res.status(200).json({ response: "Logged out successfully" });
