@@ -20,6 +20,10 @@ router.post("/chat", async (req, res) => {
         const aiResponse = result.response.text();
 
         chat.messages.push({ role: "ai", content: aiResponse });
+        if (chat.messages.length > 50) {
+            chat.messages = chat.messages.slice(chat.messages.length - 50);
+        }
+        
         await chat.save();
 
         res.json({ messages: chat.messages });
