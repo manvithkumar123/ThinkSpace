@@ -2,7 +2,7 @@ import React, { useEffect, useState,useContext } from 'react'
 import "./Classroom.css"
 import axios from 'axios';
 import { toast } from "react-toastify";
-import { Vortex } from 'react-loader-spinner'
+import { RingLoader } from "react-spinners";
 import { isAdmincontext } from '../../Context/isAdmin';
 import { useNavigate } from "react-router-dom";
 
@@ -86,15 +86,9 @@ const Classroom = () => {
         :null}
   {loader ? (
     <div className="classrooms_box_loader">
-      <Vortex
-         visible={true}
-         height="80"
-         width="80"
-         ariaLabel="vortex-loading"
-         wrapperStyle={{}}
-         wrapperClass="vortex-wrapper"
-         colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
-         />
+       <RingLoader
+       color="#008325"
+       size={80}/>
          <h3>Loading...</h3>
     </div>
   ) : data.length === 0 ? (

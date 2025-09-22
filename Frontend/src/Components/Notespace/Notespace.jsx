@@ -3,8 +3,8 @@ import "./Notespace.css";
 import axios from 'axios';
 import { toast } from "react-toastify";
 import { useNavigate } from 'react-router-dom';
-import { Vortex,Hourglass } from 'react-loader-spinner'
 import { isAdmincontext } from '../../Context/isAdmin';
+import { RingLoader } from "react-spinners";
 
 
 const Notespace = () => {
@@ -137,16 +137,10 @@ const Notespace = () => {
               <button id="upload_submit" onClick={()=>setuploading(true)}>Submit</button>
               {uploading?
               <div className="loading_uploading">
-                <Hourglass
-                  visible={true}
-                  height="40"
-                  width="40"
-                  ariaLabel="hourglass-loading"
-                  wrapperStyle={{}}
-                  wrapperClass=""
-                  colors={['#306cce', '#72a1ed']}
-                  />
-                 <h3>Uploading</h3>
+                  <RingLoader
+                  color="#008325"
+                  size={40}/>
+                     <h3 style={{marginLeft:"10px"}}>Loading</h3>
                  </div>
               :null}
               </form>
@@ -210,15 +204,9 @@ const Notespace = () => {
                 {loading ? 
                     (Array(5).fill(0).map((_, index) => (
                         <div className="notes_uploaded_loader" key={index}>
-                         <Vortex
-                            visible={true}
-                            height="80"
-                            width="80"
-                            ariaLabel="vortex-loading"
-                            wrapperStyle={{}}
-                            wrapperClass="vortex-wrapper"
-                            colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
-                            />
+                          <RingLoader
+                          color="#008325"
+                          size={80}/>
                             <h3>Loading</h3>
                         </div>
                     )))
@@ -257,15 +245,9 @@ const Notespace = () => {
                           <div className="notes_img_container">
                               {imgloading && (
                                   <div className="notes_img_loader">
-                                      <Vortex
-                                          visible={true}
-                                          height="80"
-                                          width="80"
-                                          ariaLabel="vortex-loading"
-                                          wrapperStyle={{}}
-                                          wrapperClass="vortex-wrapper"
-                                          colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
-                                      />
+                                      <RingLoader
+                                      color="#008325"s
+                                      ize={80}/>
                                       <h3>Loading</h3>
                                   </div>
                               )}

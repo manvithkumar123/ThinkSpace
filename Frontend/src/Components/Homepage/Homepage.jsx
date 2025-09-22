@@ -1,7 +1,7 @@
 import React, { use, useState } from 'react'
 import "./Homepage.css"
-import {Commet} from "react-loading-indicators"
 import { useNavigate } from "react-router-dom";
+import { RingLoader } from "react-spinners";
 const Homepage = () => {
     const[loading,setloading]=useState(true);
     const[loading2,setloading2]=useState(true);
@@ -22,7 +22,9 @@ const Homepage = () => {
             <div className="homepage_card_1">
                 <div className="homepage_card_image_container">
                     {loading ?
-                        <Commet color="#32cd32" size="small" text="loading" textColor="" />:null}
+                          <RingLoader
+                          color="#008325"
+                          size={80}/>:null}
                 <img src="https://res.cloudinary.com/dvd8yytqv/image/upload/v1756455499/unnamed_v2muib.jpg" alt="wait" onLoad={()=>setloading(false)} />
                 </div>
                 <div className="homepage_card_text_container">
@@ -32,8 +34,10 @@ const Homepage = () => {
             </div>
             <div className="homepage_card_2">
             <div className="homepage_card_image_container">
-                {loading2 ?
-                        <Commet color="#32cd32" size="small" text="loading" textColor="" />:null}
+                {loading ?
+                        <RingLoader
+                        color="#008325"
+                        size={80}/>:null}
                 <img src="https://res.cloudinary.com/dvd8yytqv/image/upload/v1756455499/unnamed-1_o2h0l1.jpg" alt="wait" onLoad={()=>{setloading2(false)}} />
                 </div>
                 <div className="homepage_card_text_container">

@@ -1,14 +1,18 @@
 import "./Navbar.css";
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState ,useContext} from 'react'
 import { useTheme } from "../../Context/ThemeContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { isAdmincontext } from '../../Context/isAdmin';
+
 const Navbar = () => {
+    const {user}= useContext(isAdmincontext);
     const [active, setActive] = useState(false);
     const [userpopup, setUserpopup] = useState(false);
     const[userdata,setUserdata]=useState(""); 
     const[loaduserdata,setloaduserdata]=useState(true); 
+    const [menuOpen, setMenuOpen] = useState(false);
     const{theme,toggleTheme} = useTheme();
     const navigate=useNavigate();
     const handlelogout=async(e)=>{
@@ -78,6 +82,12 @@ const Navbar = () => {
                 </div> }
                 </div> : null}
             </div>
+            <div className="profile_icon_bg" onClick={() => {if (!user || !user.role) {toast.error("Login first");} else {navigate('/login');}}}>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill=""><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+            </div>
+            <div className="profile_icon_bg" onClick={() => {navigate('/notespace')}}>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill=""><path d="M300-80q-58 0-99-41t-41-99v-520q0-58 41-99t99-41h500v600q-25 0-42.5 17.5T740-220q0 25 17.5 42.5T800-160v80H300Zm-60-267q14-7 29-10t31-3h20v-440h-20q-25 0-42.5 17.5T240-740v393Zm160-13h320v-440H400v440Zm-160 13v-453 453Zm60 187h373q-6-14-9.5-28.5T660-220q0-16 3-31t10-29H300q-26 0-43 17.5T240-220q0 26 17 43t43 17Z"/></svg>
+            </div>
             </div>
             <div className="profile_section_phone">
             <div className="profile_icon_bg_phone" onClick={()=>navigate("/login")}>
@@ -88,11 +98,28 @@ const Navbar = () => {
 
             </div>
             </div>
-                <div className="menubar">
+                <div className="menubar" onClick={() => setMenuOpen(!menuOpen)}>
                   <div className="menu_icon_bg">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
                 </div>
+                
               </div>
+              
+              {menuOpen && (
+                <div className="offcanvas_menu">
+                  <div className="offcanvas_header">
+                  </div>
+                  <div className="offcanvas_body">
+                    <h4 onClick={() => {navigate('/')}}>HOME</h4>
+                    <h4 onClick={() => {navigate('/classroom')}}>CLASSROOM</h4>
+                    <h4 onClick={() => {navigate('/notespace')}}>NOTESPACE</h4>
+                    <h4 onClick={() => {navigate('/login')}}>LOGIN</h4>
+                  </div>
+                </div>
+              )}
+              
+
+              
           </div>
   )
 }

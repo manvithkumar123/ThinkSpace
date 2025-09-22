@@ -1,6 +1,6 @@
 .Navbar{
     background-color: var(--navbar-color);
-    height: 60px;
+    height: max-content;
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
@@ -22,8 +22,14 @@
     font-size: 12px;
     display: flex;
 }
+.offcanvas_menu{
+  display: none;
+}
 .dark-light-toggler{
     width: 75%;
+}
+.offcanvas_body{
+  color: var(--normal-text);
 }
 .brand_image_text h2{
     margin-top: 10px;
@@ -104,10 +110,14 @@
 .menubar{
   display: none;
 }
+.profile_section{
+  gap: 15px;
+  margin-left: 50px;
+}
 .user_information{
     position: absolute;
-    top: 43px;
-    left: 40px;
+    top: 52px;
+    left: 38px;
     color: white;
     background-color: black;
     height: 120px;
@@ -133,6 +143,9 @@
 .user_information h3{
     font-size: 17px;
     margin-top: 5px;
+}
+.profile_icon_bg svg{
+  fill: var(--normal-text);
 }
 @-webkit-keyframes scale-in-tl {
     0% {
@@ -170,7 +183,8 @@
       opacity: 1;
     }
   }
-@media screen and (max-width:880px) {
+
+@media screen and (max-width:930px) {
   .navbar_options{
     display: none;
   }
@@ -210,4 +224,25 @@
   .navbar_options{
     display: none;
   }
+  .offcanvas_menu{
+    display: block;
+  }
+  .close_btn{
+    height: 30px;
+    width: 30px;
+    margin-left: auto;
+  }
+  .offcanvas_body{
+    margin-left: 40px;
+    display: flex;
+    gap: 10px;
+  }
+  .offcanvas_menu{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }

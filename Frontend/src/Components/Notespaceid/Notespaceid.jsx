@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from 'react'
 import "./Notespaceid.css"
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { Vortex } from 'react-loader-spinner'
 import { toast } from "react-toastify";
 import { useTheme } from "../../Context/ThemeContext";
+import { RingLoader } from "react-spinners";
 import {Userid} from "../../Context/UserId"
 const Notespaceid = () => {
     const { userId } = Userid();
@@ -60,16 +60,10 @@ const Notespaceid = () => {
         <div className="preview_page_items_container">
             {loading ?
                  <div className="preview_pdf_loader">
-                    <Vortex
-                      visible={true}
-                      height="80"
-                      width="80"
-                      ariaLabel="vortex-loading"
-                      wrapperStyle={{}}
-                      wrapperClass="vortex-wrapper"
-                      colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
-                      />
-                      <h3>Loading</h3>
+                    <RingLoader
+                    color="#008325"
+                    size={80}/>
+                      <h3 style={{marginTop:"20px",marginLeft:"30px"}}>Loading</h3>
                 </div>
             :
             <div className="preview_pdf">

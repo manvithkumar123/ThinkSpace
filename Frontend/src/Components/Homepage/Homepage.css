@@ -239,7 +239,7 @@
     }
     .homepage_card_1{
         height: 300px;
-        width: 250px;
+        width: 300px;
     }
     .homepage_card_2{
         height: 300px;
@@ -262,7 +262,6 @@
     }
     .homepage_card_image_container{
         width: 300px;
-        background-color: red;
     }
     .homepage_card_image_container img{
         object-fit: cover;
