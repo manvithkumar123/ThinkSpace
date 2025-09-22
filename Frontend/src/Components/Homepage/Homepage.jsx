@@ -10,7 +10,7 @@ const Homepage = () => {
     const[loading2,setloading2]=useState(true);
     const navigate=useNavigate();
   return (
-    <div className='Homepage'>
+    <div className='Homepage'>   
         <div className="homepage_welcome">
       <div className="homepage_headings_container">
         <h1>Share Ideas <br />Build Knowledge</h1>
