@@ -1,0 +1,12 @@
+.loadingstate{
+    display: flex;
+    height: 100Vh;
+    width: 100vw;
+    flex-direction: column;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+.loadingstate h2{
+    margin-top: 50px;
+}

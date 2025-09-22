@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
+import "./loading.css"
 import { RingLoader } from "react-spinners";
 
 const RedirectIfLoggedIn = ({ children }) => {
@@ -14,11 +15,11 @@ const RedirectIfLoggedIn = ({ children }) => {
   }, []);
 
   if (isLoggedIn === null) return 
-  <div style={{height:"100vh",width:"100vw",display:"flex",justifyContent:"center",alignItems:"center"}}>
-    <RingLoader
-    color="#008325"
-    size={80}/>
-    Loading...</div>; // optional loading state
+  <div className="loadingstate">
+      <RingLoader
+      color="#008325"size={80}/>
+  </div>
+  
   if (isLoggedIn) return <Navigate to="/dashboard" />;
 
   return children;
