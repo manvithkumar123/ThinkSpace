@@ -47,7 +47,7 @@ router.post("/register", async (req, res) => {
         await newUser.save();
 
         const token = generatetoken(newUser);
-        setUserTokenCookie(res, token);
+        setUserTokenCookie(res, token); // Set cross-origin cookie here
 
         return res.status(201).json({ response: "User created successfully" });
     } catch (err) {
@@ -75,7 +75,7 @@ router.post("/login", async (req, res) => {
         }
 
         const token = generatetoken(existingUser);
-        setUserTokenCookie(res, token);
+        setUserTokenCookie(res, token); // Set cross-origin cookie here
 
         return res.status(200).json({ response: "Logged in successfully" });
     } catch (err) {
