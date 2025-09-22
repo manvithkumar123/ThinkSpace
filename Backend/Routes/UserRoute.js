@@ -9,7 +9,9 @@ const isLoggedin = require('../Middlewares/isLoggedin');
 // Helper function to set cookie
 const setUserTokenCookie = (res, token) => {
     res.cookie("usertoken", token, {
-        sameSite: "None",  // required for cross-site cookies
+        httpOnly: true,      // JS cannot access
+        secure: true,        // must be HTTPS
+        sameSite: "None",    // cross-site
         maxAge: 24 * 60 * 60 * 1000 // 1 day
     });
 };
@@ -45,7 +47,7 @@ router.post("/register", async (req, res) => {
         await newUser.save();
 
         const token = generatetoken(newUser);
-        setUserTokenCookie(res, token); // Set cross-origin cookie here
+        setUserTokenCookie(res, token);
 
         return res.status(201).json({ response: "User created successfully" });
     } catch (err) {
@@ -73,7 +75,7 @@ router.post("/login", async (req, res) => {
         }
 
         const token = generatetoken(existingUser);
-        setUserTokenCookie(res, token); // Set cross-origin cookie here
+        setUserTokenCookie(res, token);
 
         return res.status(200).json({ response: "Logged in successfully" });
     } catch (err) {
@@ -136,7 +138,10 @@ router.post("/logout", isLoggedin, async (req, res) => {
 
     try {
         res.clearCookie("usertoken", {
-            sameSite: "None"
+            httpOnly: true,
+            secure: true,
+            sameSite: "None",
+            maxAge: 24 * 60 * 60 * 1000 // 1 day
         });
         return res.status(200).json({ response: "Logged out successfully" });
     } catch (err) {
