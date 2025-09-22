@@ -15,7 +15,7 @@ const upload = multer({ dest: "uploads/" });
 const oAuth2Client = new google.auth.OAuth2(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
-  process.env.REDIRECT_URL,
+  process.env.REDIRECT_URL
 );
 
 const SCOPES = ["https://www.googleapis.com/auth/drive.file"];
@@ -71,6 +71,12 @@ router.post("/upload", upload.single("file"),isLoggedin,async (req, res) => {
     if (fs.existsSync(path.join(__dirname, "../config/tokens.json"))) {
       const tokens = JSON.parse(fs.readFileSync(path.join(__dirname, "../config/tokens.json")));
       oAuth2Client.setCredentials(tokens);
+      // Refresh token if expired
+      if (tokens.expiry_date && tokens.expiry_date <= Date.now()) {
+        const newTokens = await oAuth2Client.refreshAccessToken();
+        oAuth2Client.setCredentials(newTokens.credentials);
+        fs.writeFileSync(path.join(__dirname, "../config/tokens.json"), JSON.stringify(newTokens.credentials));
+      }
     } else {
       return res.status(401).json({response:'OAuth tokens not found. Authenticate first'});
     }

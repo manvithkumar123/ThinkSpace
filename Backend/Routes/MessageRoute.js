@@ -11,7 +11,7 @@ router.get("/:roomId", async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch messages" });
   }
-});
+});   
 
 
 router.post("/send", async (req, res) => {
