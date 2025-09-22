@@ -7,7 +7,7 @@ const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');
 const generatetoken=require('../utils/generatetoken');
 const isLoggedin = require('../Middlewares/isLoggedin');
-
+   
 
 router.post("/register", async (req, res) => {
     console.log("POST /register endpoint hit");
