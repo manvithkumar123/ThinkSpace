@@ -116,6 +116,7 @@ router.post("/upload", upload.single("file"),isLoggedin,async (req, res) => {
     await newMaterial.save();
     return res.json({response:"file uploaded successfully"});
   } catch (err) {
+    console.log(err);
     return res.json({response:"an error occured"});
   }
 });
