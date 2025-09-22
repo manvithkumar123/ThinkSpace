@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "thinkspace-fa9ef",
+  "private_key_id": "33cd919ebfe7464b5261a4dfb380d19a17248e53",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC+qBdGYbUntLy4\nGKIRz8cNbiS/1uNocEXtCNMBLj/oaCVCWMEgWF7sPNzpStzJRhylrDRueR+2UQ/t\naeE2JbKXAjX7/xJ/1b4M7fOtv2xNUYTse4DbLYdbGF3V7ShzIv3+zo1ClHw6OW+c\nzPIx4V6rFxiFABLh2MewQoW5Xf+7l4ToS6oJWJFcTKVaCDhigyu0EDxkWzmo1tVD\ntcPZA44WAMGozI0Nw9Hd1c/ZjEhXPJSudkzZf9V5koFi8OTBJX3KMLmTYHNuOziz\nbIz+ephEZ6cb6EJWDmLczrT4HuRxKP+ZTI1D7PzUP2ZajRfzbgVewRRh6Rzij5Ku\njcOqU1x7AgMBAAECggEAJu/8ZObikPvkCPMa8mlNXUxP3BAefH9lgI3rThPsgGH4\nrg6jTqBNrpCVi127Lq4PfrRnNuKs29a9Wn7jvGPBj/6nGNKUrB/ygwB74lG0ZCwQ\nah2lCN5JBQ06aMzZFH6igg4cImth3aBKT6s5kX9WDroWS19i+9YCnlhPqDZu2pgy\nknmA4SP4QGTMvkEOR7RjzP9lBEe1sNkdwjJ8tyAhzWEnPxXXyBeIPmYsrsdtEtY0\n8I/v608ws8Yv7whHzB8EneSDhjow0k6eP1Y3jnc23N7Lrn9hgF64y9N0xL1llI71\nkw06nDzSmW5xyS7a92+KdMaI7JA6tK6e7g91CcG6KQKBgQDd+80sTfgh+HXCXIAS\nOZyjsQpEO6YbXIzs0EKhtfEYwOC5edsJYXVqE2AMuuv3OkXWWXqGmTH3G0wNB4+V\nWnBPJM8KYRkLzHH7noEx7t0DlrE5PWnR/0m1QlfUo6LAB27B+IFOf16aTfGYF8fy\nnpbBNh9U0l68o7sPyaONPV7vgwKBgQDb31y8SGGCHhfgUjf9I0YnllK27xgFxs7O\nojWnDh8wPzxO6LMC203L6Q34WZASVajHNgxvHYBQl89looR1Y3WyS88oNK9MsTQK\nXk8OHulh/c/RmWNnRKQ8emm0sF2vwr3wbtRWN7f/do1lwpwPHDxN+WOo1h/Tea+d\nK7HuQcCVqQKBgGDRemNgfmESpQnonlNUnWUnynqIKaK1cyG2k9lEKavKNDmxVD97\nKmLhoHrs7A4gdGVREYezOX+1gC4OpilWELX0L/ku8GWc/fno4CCPNgZiq1lz17un\nxNYx4Wz1Ef7/PueLI5rBItnaNQ1JEgRX9xi+KlwshPVx1BzGrXbk1YtRAoGAa5HA\nrgD/a4hLiBzRdZAPX4jE2OjqqNDWFvP3Kc7X5WPanoRsKAag7hUMF6fBu6aa1zOT\nK72ULFnJRuEWytOpHlzGcdYsuWmsmzH+nVr0NVPWm6XeowRLEaeWFad/fmDZSkr+\nqVvDMkGO9e0bKq1Wt5M+dbikg3LyPwPEnlse3FkCgYBam03MDiLfjnKtyVHBSa/o\nHbEhMyXoJbVxohH204PNGRYm74rbhjayRuW07kCnIblM/NH14BY9FDCJwKcC1qs8\nIvNE3Mm/738jgC0AzCCYDIT+6XB3O8ujKq70vWD9TD4ZumWFBcTosp4aeUYyNdL2\ndgdUtub2hBHtL5ylxdwxGQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "drive-uploader@thinkspace-fa9ef.iam.gserviceaccount.com",
+  "client_id": "105527753334232297850",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/drive-uploader%40thinkspace-fa9ef.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
