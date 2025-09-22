@@ -2,6 +2,8 @@ import React, { use, useState } from 'react'
 import "./Homepage.css"
 import { useNavigate } from "react-router-dom";
 import { RingLoader } from "react-spinners";
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+axios.defaults.withCredentials = true;
 const Homepage = () => {
     const[loading,setloading]=useState(true);
     const[loading2,setloading2]=useState(true);

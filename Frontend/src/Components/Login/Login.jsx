@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { toast } from "react-toastify";
 import "./Login.css"
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+axios.defaults.withCredentials = true;
 const Login = () => {
 const [slide,setslide]=useState(true);
 const [email, setEmail] = useState("");
@@ -41,6 +43,7 @@ const handlesignup=async(e)=>{
         setSignupEmail("")
         setSignupPassword("")
         setSignupKey("")
+        setName("")
     }
     catch(err){
         toast.error(err.response?.data?.response || "Something went wrong. Please try again");

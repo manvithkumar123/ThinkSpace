@@ -5,6 +5,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { isAdmincontext } from '../../Context/isAdmin';
 import { useNavigate, useParams } from "react-router-dom";
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+axios.defaults.withCredentials = true;
 
 const Dashboard = () => {
   const navigate=useNavigate();

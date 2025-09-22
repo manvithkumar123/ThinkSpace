@@ -5,6 +5,8 @@ import { toast } from "react-toastify";
 import { RingLoader } from "react-spinners";
 import { isAdmincontext } from '../../Context/isAdmin';
 import { useNavigate } from "react-router-dom";
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+axios.defaults.withCredentials = true;
 
 
 const Classroom = () => {

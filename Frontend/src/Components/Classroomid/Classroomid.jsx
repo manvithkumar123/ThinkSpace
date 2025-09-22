@@ -8,6 +8,8 @@ import { Username } from '../../Context/Username'
 import { useTheme } from "../../Context/ThemeContext";
 import {Userid} from "../../Context/UserId"
 import { Navigate } from 'react-router-dom';
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+axios.defaults.withCredentials = true;
 
 const Classroomid = () => {
   const navigate=useNavigate();

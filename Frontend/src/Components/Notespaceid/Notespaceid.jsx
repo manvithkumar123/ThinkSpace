@@ -17,7 +17,9 @@ const Notespaceid = () => {
     const[input,setInput]=useState("")
     const[SendButton,setSendButton]=useState(false)
     const chatContainerRef = useRef(null);
-
+    axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+    axios.defaults.withCredentials = true;
+    
     useEffect(() => {
         if (SendButton) {
           const timer = setTimeout(() => setSendButton(false), 1000); // reset after animation duration

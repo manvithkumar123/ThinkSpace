@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Footer.css"
 import { useTheme } from "../../Context/ThemeContext";
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+axios.defaults.withCredentials = true;
 
 const Footer = () => {
     const{theme,toggleTheme} = useTheme();
