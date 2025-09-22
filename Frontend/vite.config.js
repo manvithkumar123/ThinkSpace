@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://thinkspace12.netlify.app/',
+      '/api': 'https://thinkspace-qowf.onrender.com',
     },
   },
 })
