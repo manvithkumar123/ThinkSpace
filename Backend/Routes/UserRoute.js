@@ -38,6 +38,7 @@ router.post("/register",async(req,res)=>{
     catch(err){
         dbgr("error in creating user",err);
         res.status(500).json({response:"internal server error"});
+        console.log(err)
     }}
 })
 router.post("/login",async(req,res)=>{
