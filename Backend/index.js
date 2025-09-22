@@ -11,8 +11,12 @@ require("dotenv").config();
 const http = require("http");
 const { Server } = require("socket.io");
 const server = http.createServer(app);
+
 const io = new Server(server, {
-    cors: { origin: process.env.FRONTEND_URL }
+    cors: { 
+        origin: process.env.FRONTEND_URL,
+        credentials: true
+    }
 });
 
 
@@ -29,11 +33,19 @@ socketHandler(io);
 
 app.use(cookieParser());
 app.use(expressSession({
-    resave:false,
-    saveUninitialized:false,
-    secret:process.env.SESSION_SECRET,
-}))
-app.use(cors());
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.SESSION_SECRET,
+    cookie: {
+        httpOnly: true,
+        secure: true,      
+        sameSite: "None"   
+    }
+}));
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true,               
+}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname,'public')))
 app.use(express.urlencoded({ extended: true }));
