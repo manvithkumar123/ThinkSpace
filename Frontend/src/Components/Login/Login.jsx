@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { toast } from "react-toastify";
 import "./Login.css"
-axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
-axios.defaults.withCredentials = true;
 const Login = () => {
 const [slide,setslide]=useState(true);
 const [email, setEmail] = useState("");
@@ -38,7 +36,7 @@ const handleforgotpassword=async(e)=>{
 const handlesignup=async(e)=>{
     e.preventDefault();
     try{
-        const res= await axios.post("/api/user/register",{email:signupEmail,password:signupPassword,key:signupKey,name:name},{withCredentials:true})
+        const res= await axios.post("https://thinkspace-qowf.onrender.com/api/user/register",{email:signupEmail,password:signupPassword,key:signupKey,name:name},{withCredentials:true})
         toast.success(res.data.response || "Signup successful!");
         setSignupEmail("")
         setSignupPassword("")
