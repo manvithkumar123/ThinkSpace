@@ -12,7 +12,7 @@ const RedirectIfLoggedIn = ({ children }) => {
       .catch(() => setIsLoggedIn(false));
   }, []);
 
-  if (isLoggedIn === null) return <div>Loading...</div>; // optional loading state
+  if (isLoggedIn === null) return <div style={{height:"100vh",width:"100vw",backgroundColor:"red"}}>Loading...</div>; // optional loading state
   if (isLoggedIn) return <Navigate to="/dashboard" />;
 
   return children;
