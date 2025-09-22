@@ -6,7 +6,11 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://thinkspace-qowf.onrender.com',
+      '/api': {
+        target:'https://thinkspace-qowf.onrender.com',
+        changeOrigin: true,
+        secure: true,
+      },
     },
   },
 })
