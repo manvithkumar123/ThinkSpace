@@ -34,18 +34,16 @@ const Dashboard = () => {
       toast.error("Error in sending query. Please try again");
     }
   }
-  const handlelogout=async(e)=>{
+  const handlelogout = async (e) => {
     e.preventDefault();
-    try{
-      await axios.post("/api/user/logout")
+    try {
+      await axios.post("/api/user/logout", {}, { withCredentials: true }); // important
       toast.success("Logged out successfully");
-      window.location.reload(); 
-      window.location.href="/";
-    }
-    catch(err){
+      navigate("/"); // 
+    } catch (err) {
       toast.error("Something went wrong. Please try again");
     }
-  }
+  };
   useEffect(()=>{
     const fetchQueries=async()=>{
       try{
