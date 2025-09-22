@@ -14,7 +14,7 @@ const upload = multer({ dest: "uploads/" });
 // OAuth2 client setup
 const oAuth2Client = new google.auth.OAuth2(
   process.env.CLIENT_ID,
-  process.env.CLIENT_SECERT,
+  process.env.CLIENT_SECRET,
   process.env.REDIRECT_URL,
 );
 
