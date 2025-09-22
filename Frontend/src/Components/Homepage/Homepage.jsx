@@ -2,6 +2,7 @@ import React, { use, useState } from 'react'
 import "./Homepage.css"
 import { useNavigate } from "react-router-dom";
 import { RingLoader } from "react-spinners";
+import axios from 'axios';
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
 axios.defaults.withCredentials = true;
 const Homepage = () => {
