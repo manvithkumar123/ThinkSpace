@@ -14,11 +14,11 @@ const RedirectIfLoggedIn = ({ children }) => {
       .catch(() => setIsLoggedIn(false));
   }, []);
 
-  if (isLoggedIn === null) return 
+  if (isLoggedIn === null) return (
   <div className="loadingstate">
       <RingLoader
       color="#008325"size={80}/>
-  </div>
+  </div>)
   if (isLoggedIn) return <Navigate to="/dashboard" />;
 
   return children;

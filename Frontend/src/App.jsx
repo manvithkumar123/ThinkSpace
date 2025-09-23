@@ -35,7 +35,7 @@ function AppContent() {
         <Route path="/Notespace" element={<Notespace/>}/>
         <Route path="/Notespace/:id" element={<Notespaceid/>}/>
         <Route path="/Dashboard" element={<Dashboard/>}/>
-        <Route path="/Login" element={<Login/>}/>
+        <Route path="/Login" element={<RedirectIfLoggedIn><Login/></RedirectIfLoggedIn>}/>
       </Routes>
       <ToastContainer position="top-right" autoClose={3000} limit={1} />
       {!hideLayout && <Footer />}
