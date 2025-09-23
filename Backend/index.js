@@ -38,7 +38,7 @@ app.use(expressSession({
     secret: process.env.SESSION_SECRET,
     cookie: {
         httpOnly: true,
-        secure: true,       // required for cross-origin HTTPS
+        secure: true,      
         sameSite: "None",
         maxAge: 24 * 60 * 60 * 1000  // 1 day
     }

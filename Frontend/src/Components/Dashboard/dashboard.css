@@ -233,4 +233,13 @@
     .openquery_container{
         width: 90%;
     }
+    .information_section{
+        width: 90%;
+        padding: 10px;
+        margin-left: auto;
+    }
+    .dashboard_form{
+        margin: 0 auto;
+        padding-left: 20px;
+    }
 }

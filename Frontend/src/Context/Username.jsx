@@ -13,7 +13,7 @@ export const UserNameprovider=({children})=>{
             const res = await axios.get("/api/user/loggeduser",{ withCredentials: true })
             setUsername(res.data.response.name);
         }catch(error){
-            console.log("error")
+            console.log(error)
         }
     }
     fetchusername();

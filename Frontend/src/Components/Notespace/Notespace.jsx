@@ -26,17 +26,20 @@ const Notespace = () => {
     const branches = ["CSE","AI/ML","CSW","DS","IT","EEE","ECE","IOT","OTHER"];
     const semester = ["1-1","1-2","1-3","1-4","2-1","2-2","2-3","2-4","3-1","3-2","3-3","3-4","4-1","4-2","4-3","4-4"];
     const subject = ["Coding related", "Theory related", "Practical related"];
-      useEffect(() => {
-        if (openupload) {
-          document.body.style.overflow = "hidden"; 
-        } else {
-          document.body.style.overflow = "auto"; 
-        }
-        return () => {
-          document.body.style.overflow = "auto";
-        };
-      }, [openupload]);
-      const handleupload = async (e) => {
+
+    useEffect(() => {
+      if (openupload) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+      }
+    
+      // Cleanup in case component unmounts
+      return () => {
+        document.body.classList.remove("no-scroll");
+      };
+    }, [openupload]);
+    const handleupload = async (e) => {
         e.preventDefault(); // prevent page reload
       
         if (!user) {

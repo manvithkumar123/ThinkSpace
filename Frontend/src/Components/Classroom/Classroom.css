@@ -49,11 +49,16 @@
     align-items: center;
     flex-direction: column;
 }
+.classrooms_box_loader h3{
+    margin-top: 20px;
+    margin-left: 30px;
+}
 .classrooms_box h2{
     margin-left: 15px;
     font-family: var(--font-roboto);
     font-weight: 1500;
     margin-right: auto;
+    margin-top: 40px;
 }
 .classrooms_box button{
     height: 30px;

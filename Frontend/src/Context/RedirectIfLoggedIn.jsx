@@ -5,12 +5,12 @@ import "./loading.css"
 import { RingLoader } from "react-spinners";
 
 const RedirectIfLoggedIn = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(null); // null = loading
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
 
   useEffect(() => {
     axios
       .get("https://thinkspace-qowf.onrender.com/api/user/loggeduser", { withCredentials: true })
-      .then(() => setIsLoggedIn(true))
+      .then(() => setIsLoggedIn(true)) 
       .catch(() => setIsLoggedIn(false));
   }, []);
 
@@ -19,7 +19,6 @@ const RedirectIfLoggedIn = ({ children }) => {
       <RingLoader
       color="#008325"size={80}/>
   </div>
-  
   if (isLoggedIn) return <Navigate to="/dashboard" />;
 
   return children;

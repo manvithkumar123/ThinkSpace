@@ -57,16 +57,17 @@ const Classroom = () => {
         console.log(err)
       });
   }, []);
-   useEffect(() => {
-      if (newroom) {
-        document.body.style.overflow = "hidden"; 
-      } else {
-        document.body.style.overflow = "auto"; 
-      }
-      return () => {
-        document.body.style.overflow = "auto";
-      };
-    }, [newroom]);
+  useEffect(() => {
+    if (newroom) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [newroom]);
   return (
     <div className="classroom_page">
       {newroom?

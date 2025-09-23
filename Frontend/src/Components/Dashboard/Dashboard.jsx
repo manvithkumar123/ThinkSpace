@@ -57,15 +57,16 @@ const Dashboard = () => {
     if(user?.role==="admin"){
       fetchQueries();
     }
-  })
+  },[])
   useEffect(() => {
     if (openquery) {
-      document.body.style.overflow = "hidden"; 
+      document.body.classList.add("no-scroll");
     } else {
-      document.body.style.overflow = "auto"; 
+      document.body.classList.remove("no-scroll");
     }
+  
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("no-scroll");
     };
   }, [openquery]);
   useEffect(() => {
@@ -172,7 +173,7 @@ const Dashboard = () => {
             ))}
         </div>
       ) : (
-        <form onSubmit={handleQuery}>
+        <form onSubmit={handleQuery} className="dashboard_form">
           <div className="information_section">
             <label>
               <h3>Name</h3>

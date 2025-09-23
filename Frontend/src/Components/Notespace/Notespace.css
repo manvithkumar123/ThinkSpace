@@ -189,8 +189,6 @@
     margin-top: 15px;
     align-items: center;
 }
-.loading_uploading h3{
-}
 .upload_container{
     height: 350px;
     width: 350px;
@@ -249,6 +247,11 @@
     margin-top: -20px;
     margin-right: 10px;
 }
+@media screen and (min-width: 831px) {
+    body.no-scroll {
+      overflow: hidden !important;
+    }
+  }
 @media screen and (max-width: 830px) {
     .menubar {
         margin: 0 auto;
@@ -294,6 +297,12 @@
     }
     .filter_coloum{
         margin-top: 70px;
+    }
+    .upload_page{
+        align-items:flex-start;
+    }
+    .upload_container{
+        margin-top: 50%;
     }
 }
 @media screen and (width:1180px) and (height:820px) {
