@@ -28,17 +28,17 @@ const Notespace = () => {
     const subject = ["Coding related", "Theory related", "Practical related"];
 
     useEffect(() => {
-      if (openupload) {
-        document.body.classList.add("no-scroll");
-      } else {
-        document.body.classList.remove("no-scroll");
-      }
-    
-      // Cleanup in case component unmounts
-      return () => {
-        document.body.classList.remove("no-scroll");
-      };
-    }, [openupload]);
+  if (openupload) {
+    document.body.classList.add("no-scroll");
+  } else {
+    document.body.classList.remove("no-scroll");
+  }
+
+  // Cleanup in case component unmounts
+  return () => {
+    document.body.classList.remove("no-scroll");
+  };
+}, [openupload]);
     const handleupload = async (e) => {
         e.preventDefault(); // prevent page reload
       
