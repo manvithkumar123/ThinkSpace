@@ -2,16 +2,19 @@
     background-color: var(--navbar-color);
     height: max-content;
     display: flex;
-    flex-wrap: wrap;
     width: 100vw;
     justify-content: space-between;
 }
 .dark-light-toggler{
     display: flex;
-    height: 100%;
-    flex-wrap: wrap;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
     align-items: center;
     width: 100%;
+}
+.navbar_options{
+  margin-top: 10px;
 }
 .brand_image_text{
     height: 100%;
