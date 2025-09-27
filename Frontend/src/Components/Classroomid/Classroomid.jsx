@@ -60,7 +60,7 @@ const Classroomid = () => {
         
           socket.emit("joinRoom", id);
         
-          socket.on("newMessage", (msg) => {
+          socket.on("newMessage", (msg) => {   
             setChatData(prev => [...prev, msg]);
           });
         
