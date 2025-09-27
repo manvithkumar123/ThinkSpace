@@ -8,7 +8,7 @@ router.get("/:roomId", async (req, res) => {
   try {
     const messages = await MessageModule.find({ room: roomId }).sort({ createdAt: 1 });
     res.status(200).json(messages);
-  } catch (err) {
+  } catch (err) {    
     res.status(500).json({ error: "Failed to fetch messages" });
   }
 });   
@@ -16,7 +16,7 @@ router.get("/:roomId", async (req, res) => {
 
 router.post("/send", async (req, res) => {
   const { room, user, text, userid } = req.body;
-  try {
+  try { 
     const message = await MessageModule.create({ room, user, text, userid });
 
     // Emit the new message to everyone in the room
@@ -26,6 +26,6 @@ router.post("/send", async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: "Failed to send message" });
   }
-});
+});p
 return router;
 }

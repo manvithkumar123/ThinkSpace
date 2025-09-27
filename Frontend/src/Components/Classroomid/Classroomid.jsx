@@ -52,18 +52,22 @@ const Classroomid = () => {
             return () => clearTimeout(timer);
           }
         }, [send]);
-  useEffect(() => {
-    const socket = io("http://localhost:3000");
-    socket.emit("joinRoom", id);
-  
-    socket.on("newMessage", (msg) => {
-      setChatData(prev => [...prev, msg]);
-    });
-  
-    return () => {
-      socket.disconnect();
-    };
-  }, [id]);
+        useEffect(() => {
+          const socket = io("http://localhost:3000", {
+            transports: ["websocket"], // force websocket
+            withCredentials: true      // send cookies if any
+          });
+        
+          socket.emit("joinRoom", id);
+        
+          socket.on("newMessage", (msg) => {
+            setChatData(prev => [...prev, msg]);
+          });
+        
+          return () => {
+            socket.disconnect();
+          };
+        }, [id]);
   useEffect(() => {
     const handleuserdata = async () => {
       try {
