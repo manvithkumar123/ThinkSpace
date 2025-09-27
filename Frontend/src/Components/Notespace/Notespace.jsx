@@ -253,7 +253,6 @@ const Notespace = () => {
                                       <RingLoader
                                       color="#008325"s
                                       ize={80}/>
-                                      <h3>Loading</h3>
                                   </div>
                               )}
                               <img

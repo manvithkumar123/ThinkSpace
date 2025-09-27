@@ -4,6 +4,7 @@
     width: 100vw;
     flex-direction: column;
     background-color: transparent;
+    background-color: var(--bg-color);
     justify-content: center;
     align-items: center;
 }
